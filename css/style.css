@@ -187,6 +187,18 @@ header li:last-child{ margin-right: 0; }
 @media (max-width: 850px){
     .newsletter input{ flex-basis: 100%; margin-bottom: 15px; }
 }
+/*GOOGLE MAP*/
+#google-map{
+    display: flex;
+    border-bottom: 1.5px solid #191c03;
+    width: 100%; 
+    height: 25vw;
+}
+@media(max-width: 850px){
+    #google-map{
+        height: 80vw;
+    }
+}
 /*FOOTER*/
 footer{
     display: flex;

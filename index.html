@@ -64,6 +64,13 @@
         </ul>
     </section>
 
+    <section id='google-map'>
+        <!--
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.966490067059!2d-39.00917993887837!3d-14.369511898406037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739381861b07adf%3A0xdbc7741e4a4da4a4!2sItacarezinho+Beach!5e0!3m2!1spt-BR!2sbr!4v1546639192160" frameborder="0" style="border:0" allowfullscreen></iframe>
+        -->
+        
+        </section>
+    
     <section class='newsletter'>
         <h3>Newsletter</h3>
         <p>Assine nossa newletter para se manter atualizado com nossos serviços e a programação de nossos
@@ -86,5 +93,18 @@
         
     </footer>
 
+    <script>
+        function initMap() {
+          let location = {lat: -14.338368, lng: -38.999174};
+
+          let map = new google.maps.Map(
+              document.getElementById('google-map'), {zoom: 15, center: location});
+
+          let pointer = new google.maps.Marker({ position: location, map: map});
+        }
+    </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+     </script>
 </body>
 </html>
