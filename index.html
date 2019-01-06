@@ -10,6 +10,9 @@
     <link rel='stylesheet' href="css/style.css"/>
 </head>
 <body>
+    <div id='loader'>
+        <div class='spinner'></div>
+    </div>
 
     <header>
          <a href='#'><img src='img/logo.png' alt="Hotel Paraiso"></a>
@@ -20,7 +23,6 @@
              <li><a href='#'>Contato</a></li>
          </nav>
     </header>
-
     <section class='hero'>
         <h1>Conheça este paraíso chamado Itacaré</h1>
         <h3>"Aconchego, conforto, simpatia e alto astral"</h3>
@@ -94,6 +96,8 @@
     </footer>
 
     <script>
+
+        //Google Maps
         function initMap() {
           let location = {lat: -14.338368, lng: -38.999174};
 
@@ -102,9 +106,13 @@
 
           let pointer = new google.maps.Marker({ position: location, map: map});
         }
+
+        // Loader
+        let preloader = document.getElementById("loader");
+            window.addEventListener('load', function(){setTimeout(function(){ preloader.style.display = 'none'; },1500)});
     </script>
      <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
      </script>
 </body>
 </html>
